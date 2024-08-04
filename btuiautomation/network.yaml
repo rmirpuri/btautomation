@@ -1,0 +1,3 @@
+networks:
+  simple-form-net:
+    driver: bridge

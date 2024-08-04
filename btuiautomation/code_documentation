@@ -1,0 +1,9 @@
+Documentation:
+
+chmod +x chromedriver
+xattr -d com.apple.quarantine chromedriver
+
+https://storage.googleapis.com/chrome-for-testing-public/127.0.6533.72/mac-x64/chromedriver-mac-x64.zip
+https://chromedriver.storage.googleapis.com/127.0.6533.72/chromedriver_mac64.zip
+https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
+https://storage.googleapis.com/chrome-for-testing-public/127.0.6533.72/mac-x64/chromedriver-mac-x64.zip
