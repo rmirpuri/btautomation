@@ -23,7 +23,9 @@ public class BaseTest {
     public void setUp() {
         log.info("Before Test: Setup");
         //setUpDocker();
-        webDriverManager = new WebDriverManager();
+        //webDriverManager = new WebDriverManager("firefox");
+        webDriverManager = new WebDriverManager("chrome");
+        //webDriverManager = new WebDriverManager("edge");
         driver = webDriverManager.getDriver();
     }
 
