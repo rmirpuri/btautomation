@@ -1,0 +1,57 @@
+Test Cases:
+
+Verify that user can go to page and view link to create a ticket
+Verify that user can click on the link and go to next page to submit form
+Verify that user can go back to previous page by clicking on back button
+Verify that user can enter Title
+Verify that title is a mandatory field
+Verify that user can select Application Area from the dropdown
+Verify that user can enter description with the max length of X characters
+Verify that user can enter date
+Verify that user can enter Video URL
+Verify that user gets an error message when they enter video URL in incorrect format
+Verify that user can enter email
+Verify that user gets an error message when they enter email in incorrect format
+
+
+
+Areas of improvement
+When user enters email in incorrect format and clicks on Submit, we get a message "Error occurred, check the network tab on your browser's developer tools for more details". User should get a correct message
+
+User cannot submit form without entering Tags. Noticed that we either need to mark Tags dropdown with astreick or allow user to submit form without selecting Tags field.
+Tags field should be a radio button instead of checkbox. 
+
+Contact email field should be mandatory. User should not be allowed to submit form without providing email address. 
+
+There should be a limit to how many characters that can be entered in the Title. If users exceeds the limit there should be an error message below the field.
+
+On the homepage, there should be headers to the columns 
+
+On the homepage, when user submits form as "Dashboard" it appears as NA on homepage after submitting.
+
+Email should be sent to the user with request id
+
+We should bave a way for the user to check the status of their request after they submit the form.
+
+Entering long title misaligns the columns after submitting the form on homepage
+
+On the homepage the time of the submission should be of local time of the user and not in UTC
+
+When user clicks on the Edit button on homepage, Application area should display the value previously submitted by the user
+
+User should not be allowed to delete the request. They should be only allowed to cancel the request.
+
+If Delete feature is necessary then there should be a warning message to user after they click on the Delete button. 
+
+There should not be Resolved check box on the form. This shoule be enabled after the user has submitted the form.
+
+Any ticket that is marked as Resolved should not be allowed to Edit. Instead Edit should change into "Reopen"
+
+
+
+
+
+
+
+
+
