@@ -37,6 +37,7 @@ public class CreateTicketTest extends BaseTest {
         this.formPage.enterDate(TestData.DATE);
         this.formPage.clickSubmitButton();
         Assert.assertTrue(this.createTicketPage.isTicketCreated((title)));
+        log.info("End of test.");
 
     }
 
