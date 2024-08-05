@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import test.util.Constants;
 import test.util.DateTimeUtil;
+import test.util.TestData;
 
 public class CreateTicketTest extends BaseTest {
     private CreateTicketPage createTicketPage;
@@ -29,11 +30,11 @@ public class CreateTicketTest extends BaseTest {
     @Test(dependsOnMethods = "createTicket")
     public void fillForm(){
         String title = "Employee_Ticket_"+ DateTimeUtil.getCurrentDateTime();
-        this.formPage.enterTitle(title);
+        this.formPage.enterTitle(TestData.TITLE);
         this.formPage.clickDropdownAndSelect();
         this.formPage.selectDashboard();
-        this.formPage.enterDescription("Please help with dashboard app. Error code xyz");
-        this.formPage.enterDate("12/20/2024");
+        this.formPage.enterDescription(TestData.DESCRIPTION);
+        this.formPage.enterDate(TestData.DATE);
         this.formPage.clickSubmitButton();
         Assert.assertTrue(this.createTicketPage.isTicketCreated((title)));
 
