@@ -1,4 +1,4 @@
-package test.docker;
+package test.ticket;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
@@ -95,6 +95,20 @@ public class CreateTicketTest extends BaseTest {
         boolean containsEmployeeTicket = titles.stream().anyMatch(title -> title.contains("Employee_Ticket"));
         Assert.assertTrue(containsEmployeeTicket, "None of the titles contain "+"Employee_Ticket");
 
+    }
+
+    @Test(priority = 6)
+    public void validateArraySize() {
+        Response response = given().when().get().then().extract().response();
+        JsonPath jsonPath = new JsonPath(response.asString());
+        List<?> jsonArray = jsonPath.getList("$");
+        Assert.assertTrue(jsonArray.size() > 0, "JSON array is empty");
+    }
+
+    @Test(priority = 6)
+    public void validateResponseTime() {
+        Response response = given().when().get();
+        Assert.assertTrue(response.getTime() < 2000, "Response time is greater than 2000 ms");
     }
 
 }
