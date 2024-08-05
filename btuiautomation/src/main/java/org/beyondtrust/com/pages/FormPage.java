@@ -25,6 +25,9 @@ public class FormPage extends AbstractPage{
     @FindBy(css = "[formcontrolname='dateTime']")
     private WebElement date;
 
+    @FindBy(xpath = "//button//span[contains(text(),'Submit')]")
+    private WebElement submitButton;
+
     public FormPage(WebDriver driver) {
         super(driver);
     }
@@ -53,7 +56,11 @@ public class FormPage extends AbstractPage{
     }
 
     public void enterDate(String date){
-        this.enterDate(date);
+        this.date.sendKeys(date);
+    }
+
+    public void clickSubmitButton(){
+        this.submitButton.click();
     }
 
 

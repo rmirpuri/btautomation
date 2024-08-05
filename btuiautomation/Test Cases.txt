@@ -12,6 +12,8 @@ Test Cases:
 10. Verify that the user receives an error message when entering a Video URL in an incorrect format.
 11. Verify that the user can enter an email address.
 12. Verify that the user receives an error message when entering an email address in an incorrect format.
+13. Add special characters to the input fields and verify that user gets error message
+13. Add really long text in all the fields and verify that user gets appropriate error messages
 
 Areas of Improvement:
 
@@ -31,4 +33,6 @@ Areas of Improvement:
 14. If the Delete feature is necessary, a warning message should be displayed to the user after they click the Delete button.
 15. There should not be a Resolved checkbox on the form. This should be enabled only after the user has submitted the form.
 16. Any ticket marked as Resolved should not be allowed to be edited. Instead, the Edit button should change to "Reopen."
-
+17. Look and feel of the website can be improved
+18. Add login functionality
+19. Follow the guidlines mentioned by Web Content Accessibility Guidelines (WCAG) so that it is accessible to color blind and screen reader friendly

@@ -1,5 +1,6 @@
 package org.beyondtrust.com.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -28,5 +29,15 @@ public class CreateTicketPage extends AbstractPage{
 
     public void createTicket(){
         this.createTicket.click();
+    }
+
+    public Boolean isTicketCreated(String text) {
+        String xpath = "//mat-list//span[contains(text(), '" + text + "')]";
+        try {
+            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            return element.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
     }
 }
